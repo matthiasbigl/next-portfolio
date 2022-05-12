@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Typewriter from "typewriter-effect";
 import {useState} from "react";
+import Image from "next/image";
+import profile from "../assets/images/matthiasbigl.jpg";
 
 
 export default function Home() {
@@ -15,16 +17,17 @@ export default function Home() {
                 className={'bg-gradient-to-br from-cyan-500 to-blue-700 h-[60vh] w-3/4 p-8 pb-12 m-8 rounded-lg text-center flex justify-center items-center'}>
 
                 <div>
-                    <h1 className={'text-white font-bold text-5xl align-middle'}>
+
 
 
                         {
                             isTyping ?
+                                <h1 className={'text-white font-bold text-5xl align-middle'}>
                                 <Typewriter
 
 
                                     //check if the typewriter is typing
-                                    options={{delay: 75,deleteSpeed:50}}
+                                    options={{delay: 75, deleteSpeed: 50}}
                                     onInit={(typewriter) => {
 
 
@@ -39,23 +42,34 @@ export default function Home() {
                                             .deleteAll()
                                             .start();
                                         //check if the typewriter is typing
-                                         setTimeout(() => {
+                                        setTimeout(() => {
                                             setIsTyping(false);
-                                         }, 12000);
+                                        }, 12000);
 
 
                                     }}
 
 
-                                /> :
-                                <div className='grid'>
+                                />
+                                </h1>:
+                                <div className='grid-cols-2 grid place-content-center'>
+                                   <div
+                                   className={'col-span-2 flex w-full justify-center items-center'}>
+                                     <Image
+                                     src={profile}
+                                     width={200}
+                                     height={200}
+                                     className={'rounded-full'}
+                                     alt={'Matthias Bigl'}
+                                     />
+                                   </div>
 
 
                                 </div>
                         }
 
 
-                    </h1>
+
 
                 </div>
 
