@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import "@fortawesome/fontawesome-svg-core/styles.css";
 
 @layer components {
 
@@ -90,12 +92,6 @@ body {
       width: 60px;
     }
   }
-}
-ul{
-  list-style: indside url("https://www.mediaevent.de/css/svg/arrow-right.svg") ;
-  padding-left: 2rem ;
-  padding-bottom: 2rem;
-
 }
 ol{
   list-style-type: decimal;
