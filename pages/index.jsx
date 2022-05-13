@@ -142,7 +142,7 @@ export default function Home() {
                             <div className={'col-span-2 lg:col-span-1 text-white flex justify-center mb-8'}>
                                 <div className={'align-middle w-9/10 lg:w-4/5'}>
                                     <h1 className={'text-2xl font-semibold'}>
-                                        My skillss:
+                                        My skills:
                                     </h1>
                                     <p className={'text-lg'}>
                                         I mostly got my education in <a className={'font-semibold text-white'}>Java</a>
