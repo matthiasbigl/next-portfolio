@@ -15,7 +15,7 @@ export default function ContactMe() {
         console.log("Sending email...");
         console.log(process.env.SERVICE_ID_EMAILJS);
         console.log(process.env.USER_ID_EMAILJS);
-        emailjs.sendForm(process.env.SERVICE_ID_EMAILJS, 'template_nafvl5l', e.target, process.env.USER_ID_EMAILJS)
+        emailjs.sendForm(process.env.SERVICE_ID_EMAILJS, process.env.TEMPLATE_ID_EMAILJS, e.target, process.env.USER_ID_EMAILJS)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
