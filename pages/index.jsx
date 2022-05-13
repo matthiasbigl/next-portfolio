@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Typewriter from "typewriter-effect";
 import React, {useState} from "react";
+
 import Image from "next/image";
 import profile from "../assets/images/matthiasbigl.jpg";
 import {library} from "@fortawesome/fontawesome-svg-core";
@@ -15,6 +16,19 @@ export default function Home() {
     const [isTyping, setIsTyping] = useState(true);
 
 
+
+    const handleClick = () => {
+        setIsTyping(false);
+    };
+    //check if the user was on the page before if so dont show the typewriter
+
+
+
+
+
+
+
+
     // @ts-ignore
     return (
         <div className={'flex justify-center items-center'}>
@@ -22,17 +36,16 @@ export default function Home() {
                 <title>Matthias Bigl Webportfolio</title>
             </Head>
             <div
-                className={'bg-gradient-to-br from-cyan-500 to-blue-700 w-3/4 p-8 pb-12 m-8 rounded-lg text-center flex justify-center items-center'}>
+                className={'bg-gradient-to-br from-cyan-500 to-blue-700 w-3/4 p-8 pb-12 m-8 rounded-lg text-center flex justify-center items-center drop-shadow-lg'}>
 
 
                 {
                     isTyping ?
-                        <div className={'h-[60vh] flex justify-center items-center'}>
+                        <div className={'h-[60vh] flex justify-center items-center'}
+                        onClick={handleClick}
+                        >
                             <h1 className={'text-white font-bold text-5xl align-middle'}>
                                 <Typewriter
-
-
-                                    //check if the typewriter is typing
                                     options={{delay: 75, deleteSpeed: 50}}
                                     onInit={(typewriter) => {
 
@@ -60,23 +73,23 @@ export default function Home() {
                             </h1>
                         </div>
                         :
-                        <div className='grid-cols-2 grid place-content-center w-full'>
+                        <div className='grid-cols-2 grid place-content-center w-full animate-fade-in-down duration-300'>
                             <div
-                                className={'col-span-2 flex justify-center items-center mb-5 animate-fade-in-down duration-300'}>
+                                className={'col-span-2 flex justify-center items-center mb-5'}>
                                 <Image
                                     src={profile}
                                     width={200}
                                     height={200}
-                                    className={'rounded-full'}
+                                    className={'rounded-full drop-shadow-lg'}
                                     alt={'Matthias Bigl'}
                                 />
 
                             </div>
                             <div
-                                className={'col-span-2 flex justify-center items-center mb-2 animate-fade-in-down duration-300' }>
+                                className={'col-span-2 flex justify-center items-center mb-2 '}>
 
 
-                                <div className="flex flex-row mt-1" role="group">
+                                <div className="flex flex-row mt-1 drop-shadow-md" role="group">
 
                                     <a
                                         href="https://www.instagram.com/matthias_bigl"
@@ -113,12 +126,12 @@ export default function Home() {
                                 </div>
                             </div>
                             <div
-                                className={'col-span-2 flex justify-center items-center pb-8 mb-5 animate-fade-in-down duration-300'}>
+                                className={'col-span-2 flex justify-center items-center pb-8 mb-5'}>
                                 <h1 className={'text-white font-bold text-5xl align-middle'}>
                                     Matthias Bigl
                                 </h1>
                             </div>
-                            <div className={'col-span-2 lg:col-span-1 text-white flex justify-center mb-8 animate-fade-in-down-500'}>
+                            <div className={'col-span-2 lg:col-span-1 text-white flex justify-center mb-8'}>
                                 <div className={'align-middle w-9/10 lg:w-4/5'}>
                                     <h1 className={'text-2xl font-semibold'}>
                                         About me:
@@ -132,7 +145,7 @@ export default function Home() {
                                     >
                                         HTL-Hollabrunn
                                     </a>
-                                        I hope to become a full stack developer in the near future.
+                                        I have aspirations to become a full stack developer in the near future.
                                         Hopefully I can impress you with my skills and projects.
                                     </p>
                                 </div>
