@@ -13,9 +13,7 @@ export default function ContactMe() {
 
     function sendEmail(e){
         console.log("Sending email...");
-        console.log(process.env.SERVICE_ID_EMAILJS);
-        console.log(process.env.USER_ID_EMAILJS);
-        emailjs.sendForm(process.env.SERVICE_ID_EMAILJS, process.env.TEMPLATE_ID_EMAILJS, e.target, process.env.USER_ID_EMAILJS)
+        emailjs.sendForm('service_xpqw3ri', 'template_nafvl5l', e.target,'user_S2EFRasWeJBpGtvAoLiCb')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -37,7 +35,7 @@ export default function ContactMe() {
 
             <div
                 className={'bg-gradient-to-br from-pink-500 to-yellow-500 w-3/4 p-4 md:p-8 pb-12 m-8 rounded-lg text-center flex justify-center items-center drop-shadow-lg'}>
-                <div className={' text-white w-full flex flex-row '}>
+                <div className={'h-[60vh] text-white w-full flex flex-row '}>
                   <div className={'grid grid-cols-2 w-full'}>
                     <div className={'col-span-1 w-full hidden md:flex items-center justify-center text-center flex-col p-8'}>
 
@@ -50,7 +48,7 @@ export default function ContactMe() {
 
                     </div>
                     <div className={'w-full col-span-2 md:col-span-1 flex justify-center'}>
-                        <div className="flex lg:justify-center  w-full self-center">
+                        <div className="flex md:justify-center  w-full self-center">
 
                             <div className="w-full  px-1 ">
                                 <div className="bg-white text-black rounded-lg p-8 shadow-lg">

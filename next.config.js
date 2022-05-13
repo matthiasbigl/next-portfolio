@@ -6,11 +6,4 @@ module.exports = {
     dangerouslyAllowSVG: true
   },
   reactStrictMode: true,
-  /*
-  env:{
-    SERVICE_ID_EMAILJS: process.env.SERVICE_ID_EMAILJS,
-    USER_ID_EMAILJS: process.env.USER_ID_EMAILJS,
-    TEMPLATE_ID_EMAILJS: process.env.TEMPLATE_ID_EMAILJS,
-
-  }*/
 }
