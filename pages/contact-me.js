@@ -37,7 +37,7 @@ export default function ContactMe() {
 
             <div
                 className={'bg-gradient-to-br from-pink-500 to-yellow-500 w-3/4 p-4 md:p-8 pb-12 m-8 rounded-lg text-center flex justify-center items-center drop-shadow-lg'}>
-                <div className={'h-[60vh] text-white w-full flex flex-row '}>
+                <div className={' text-white w-full flex flex-row '}>
                   <div className={'grid grid-cols-2 w-full'}>
                     <div className={'col-span-1 w-full hidden md:flex items-center justify-center text-center flex-col p-8'}>
 
