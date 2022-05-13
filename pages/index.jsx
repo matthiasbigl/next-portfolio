@@ -12,7 +12,9 @@ import Link from "next/link";
 
 export default function Home() {
     library.add(fab);
-    const [isTyping, setIsTyping] = useState(true);
+    const [isTyping, setIsTyping] = useState(false);
+
+
     // @ts-ignore
     return (
         <div className={'flex justify-center items-center'}>
@@ -60,7 +62,7 @@ export default function Home() {
                         :
                         <div className='grid-cols-2 grid place-content-center w-full'>
                             <div
-                                className={'col-span-2 flex justify-center items-center mb-5'}>
+                                className={'col-span-2 flex justify-center items-center mb-5 animate-fade-in-down duration-300'}>
                                 <Image
                                     src={profile}
                                     width={200}
@@ -71,7 +73,7 @@ export default function Home() {
 
                             </div>
                             <div
-                                className={'col-span-2 flex justify-center items-center mb-2'}>
+                                className={'col-span-2 flex justify-center items-center mb-2 animate-fade-in-down duration-300' }>
 
 
                                 <div className="flex flex-row mt-1" role="group">
@@ -79,7 +81,7 @@ export default function Home() {
                                     <a
                                         href="https://www.instagram.com/matthias_bigl"
                                         target="_blank"
-                                        className="group flex px-2 py-2 font-medium text-white hover:text-gray-900 transition ease-in-out duration-500"
+                                        className="group flex px-2 py-2 font-medium text-white hover:text-blue-900 transition ease-in-out duration-500"
                                     >
 
                                         <FontAwesomeIcon
@@ -90,7 +92,7 @@ export default function Home() {
                                     <a
                                         href="https://www.linkedin.com"
                                         target="_blank"
-                                        className="group flex px-2 py-2 font-medium text-white hover:text-gray-900 transition ease-in-out duration-500"
+                                        className="group flex px-2 py-2 font-medium text-white hover:text-blue-900 transition ease-in-out duration-500"
                                     >
                                         <FontAwesomeIcon
                                             size="2x"
@@ -100,7 +102,7 @@ export default function Home() {
                                     <a
                                         href="https://www.github.com/matthiasbigl"
                                         target="_blank"
-                                        className="group flex px-2 py-2 font-medium text-white hover:text-gray-900 transition ease-in-out duration-500"
+                                        className="group flex px-2 py-2 font-medium text-white hover:text-blue-900 transition ease-in-out duration-500"
                                     >
                                         <FontAwesomeIcon
                                             size="2x"
@@ -111,13 +113,13 @@ export default function Home() {
                                 </div>
                             </div>
                             <div
-                                className={'col-span-2 flex justify-center items-center pb-8 mb-5'}>
+                                className={'col-span-2 flex justify-center items-center pb-8 mb-5 animate-fade-in-down duration-300'}>
                                 <h1 className={'text-white font-bold text-5xl align-middle'}>
                                     Matthias Bigl
                                 </h1>
                             </div>
-                            <div className={'col-span-2 lg:col-span-1 text-white flex justify-center mb-8'}>
-                                <div className={'align-middle w-4/5'}>
+                            <div className={'col-span-2 lg:col-span-1 text-white flex justify-center mb-8 animate-fade-in-down-500'}>
+                                <div className={'align-middle w-9/10 lg:w-4/5'}>
                                     <h1 className={'text-2xl font-semibold'}>
                                         About me:
                                     </h1>
@@ -138,7 +140,7 @@ export default function Home() {
 
                             </div>
                             <div className={'col-span-2 lg:col-span-1 text-white flex justify-center mb-8'}>
-                                <div className={'align-middle w-4/5'}>
+                                <div className={'align-middle w-9/10 lg:w-4/5'}>
                                     <h1 className={'text-2xl font-semibold'}>
                                         My skills:
                                     </h1>
