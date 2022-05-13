@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export default function Home() {
     library.add(fab);
-    const [isTyping, setIsTyping] = useState(false);
+    const [isTyping, setIsTyping] = useState(true);
 
 
     // @ts-ignore
@@ -142,13 +142,14 @@ export default function Home() {
                             <div className={'col-span-2 lg:col-span-1 text-white flex justify-center mb-8'}>
                                 <div className={'align-middle w-9/10 lg:w-4/5'}>
                                     <h1 className={'text-2xl font-semibold'}>
-                                        My skills:
+                                        My skillss:
                                     </h1>
                                     <p className={'text-lg'}>
-                                        I mostly got my education in Java, PHP and SQL.
-                                        However I am a self-taught developer in JavaScript, React Node.js and Next.js.
-                                        I am also familiar with Python as you will see in my projects.
+                                        I mostly got my education in <a className={'font-semibold text-white'}>Java</a>
+                                        , <a className={'font-semibold text-white'}>PHP</a> and <a className={'font-semibold text-white'}>SQL</a>.
+                                        However I am a self-taught developer in <a className={'font-semibold text-white'}>Javascript</a>, <a className={'font-semibold text-white'}>React</a> <a className={'font-semibold text-white'}>Next.js</a> and <a className={'font-semibold text-white'}>Node.js</a>.
                                         I am constantly learning new technologies and frameworks.
+                                        I am also familiar with <a className={'font-semibold text-white'}>Python</a> as you will see in my projects.
                                     </p>
                                 </div>
 
