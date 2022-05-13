@@ -45,9 +45,10 @@ const Header = () => {
                         <div>
 
                             {categories.map((category) => (
-                                <Link href={`/category/${category.slug}`} key={category.slug}>
+                                <Link href={`/category/${category.slug}`} key={category.slug}
+                                >
                             <span
-                                className={'ml-4 md:float-right mt-2 align-middle text-zinc-200 font font-semibold'}>
+                                className={'ml-4 md:float-right mt-2 align-middle text-zinc-200 font font-semibold cursor-pointer'}>
 
                                 {category.name}
                             </span>
