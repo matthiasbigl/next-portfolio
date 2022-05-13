@@ -1,7 +1,5 @@
 import type { AppProps } from 'next/app'
 import '../styles/globals.scss'
-import { config } from "@fortawesome/fontawesome-svg-core";
-config.autoAddCss = false;
 import {Layout} from "../Components";
 
 
